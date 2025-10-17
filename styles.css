@@ -26,6 +26,9 @@ h2 {
     font-size: 1.6em;
     text-align: center;
     font-style: italic; 
+    width: 50%;
+    margin:5px auto;
+
 }
 h3 {
     border-left: 20px double #000000;
@@ -91,7 +94,7 @@ a:active {
     padding: 5px;
     margin: 0 auto;
     margin-top: 10px;
-    border: 1px dotted white;
+    border: 2px dotted white;
 
 }
 li {
@@ -99,7 +102,7 @@ li {
 }
 @media (max-width:1200px){
     #container{
-        width: 970px;
+        width: 900px;
     }
 }
 @media (max-width:992px){
