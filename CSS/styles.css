@@ -1,0 +1,170 @@
+body {
+    background-color:rgb(98, 98, 98);
+    color: #fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    padding-right: 20px;
+}
+img {
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    margin: 20px;
+}
+h1 {
+    background-color: black;
+    border: 3px, solid, white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 1.6em;
+    text-align: center;
+    font-style: italic; 
+    width: 50%;
+    margin:5px auto;
+
+}
+h3 {
+    border-left: 20px double #000000;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-bottom: 2px solid #000000;
+    width: 200px;
+    background-color:rgb(147, 21, 21);
+}
+p {
+    line-height: 2.2em;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: rgb(88, 88, 88);
+}
+
+/* PSUEDO SELECTORS */
+a:link {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+    color: red;
+}
+a:hover {
+    text-decoration: underline;
+    color: rgb(192, 4, 4)
+}
+a:active {
+    color: white;
+}
+/* ID RULES */
+#pic2 {
+    float: right;
+}
+#container {
+    width: 1000px;
+    margin: auto;
+    background-color:rgb(167, 14, 14);
+    padding: 40px;
+}
+#sidebar {
+    background-color: #282727;
+    width: 250px;
+    line-height: 2.5em;
+    border: 2px solid #ccc;
+    float: right;
+    margin: 20px;
+    margin-top: 70px;
+}
+#sidebar h3 {
+    text-align: center;
+    border: none;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 2px dotted white;
+}
+#navbarBox {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+    background-color: rgb(108, 1, 1);
+    width:100%;
+}
+#navbarBox1 {
+    display:flex;
+    align-items: center;
+    float: right;
+}
+#navbarBox2 {
+    display:flex;
+    align-items: center;
+    float: left;
+}
+#navbar {
+    margin: 20px;
+}
+#navbarLogo {
+    width: 40px;
+}
+/* CLASS RULES */
+.highlight {
+    background-color: rgb(167, 53, 53);
+    color: black;
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.navbar {
+    margin: 20px;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+li {
+    font-style: italic;
+}
+@media (max-width:1200px){
+    #container{
+        width: 900px;
+    }
+}
+@media (max-width:992px){
+    #container{
+        width:100%;
+    }
+    #navbarLogo {
+        display: none
+    }
+    body, p, #container{
+        margin: 0;
+        border: none;
+        padding: 0;
+    }
+    p {
+        padding: 20px;
+    }
+}
+@media (max-width:768px){
+    #sidebar {
+        display: none;
+    }
+    #navbarBox1 {
+        flex-direction: column;
+    }
+    #navbarBox2 {
+        flex-direction: column;
+    }
+    h1{
+        color: 100%;
+    }
+    img{
+        width: 250px;
+    }
+}

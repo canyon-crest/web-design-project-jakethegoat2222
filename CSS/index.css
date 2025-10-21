@@ -3,8 +3,8 @@ body {
     color: #fff;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-p {
-    line-height: 2em;
+li {
+    padding-right: 20px;
 }
 img {
     width: 300px;
@@ -28,7 +28,6 @@ h2 {
     font-style: italic; 
     width: 50%;
     margin:5px auto;
-
 }
 h3 {
     border-left: 20px double #000000;
@@ -42,7 +41,12 @@ p {
     line-height: 2.2em;
     padding: 20px;
     border: 2px solid #ccc;
+    text-align: center;
     background-color: rgb(88, 88, 88);
+    width: 400px;
+    float:right;
+    font-weight: 800;
+    border-radius: 10px;
 }
 
 /* PSUEDO SELECTORS */
@@ -52,7 +56,7 @@ a:link {
     font-weight: bold;
 }
 a:visited {
-    color: rgb(108, 1, 1)
+    color: red;
 }
 a:hover {
     text-decoration: underline;
@@ -62,16 +66,14 @@ a:active {
     color: white;
 }
 /* ID RULES */
-#pic2 {
-    float: right;
+#box {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
-/* CLASS RULES */
-.highlight {
-    background-color: rgb(167, 53, 53);
-    color: black;
-    padding: 2px;
-    border-radius: 3px;
-    font-weight: bold;
+#homepagePic {
+    float:center;
 }
 #container {
     width: 1000px;
@@ -86,7 +88,7 @@ a:active {
     border: 2px solid #ccc;
     float: right;
     margin: 20px;
-    margin-top: 70px
+    margin-top: 70px;
 }
 #sidebar h3 {
     text-align: center;
@@ -95,7 +97,41 @@ a:active {
     margin: 0 auto;
     margin-top: 10px;
     border: 2px dotted white;
-
+}
+#navbarBox {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+    background-color: rgb(108, 1, 1);
+    width:100%;
+}
+#navbarBox1 {
+    display:flex;
+    align-items: center;
+    float: right;
+}
+#navbarBox2 {
+    display:flex;
+    align-items: center;
+    float: left;
+}
+#navbarLogo {
+    width: 40px;
+}
+/* CLASS RULES */
+.highlight {
+    background-color: rgb(167, 53, 53);
+    color: black;
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.navbar {
+    margin: 20px;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 li {
     font-style: italic;
@@ -109,18 +145,29 @@ li {
     #container{
         width:100%;
     }
-    body, p, #container{
+    #navbarLogo {
+        display: none
+    }
+    body, #container{
         margin: 0;
         border: none;
         padding: 0;
     }
     p {
-        padding: 20px;
+        margin: 0;
+        padding: 0px;
+        border: 2px solid #ccc;
     }
 }
 @media (max-width:768px){
     #sidebar {
         display: none;
+    }
+    #navbarBox1 {
+        flex-direction: column;
+    }
+    #navbarBox2 {
+        flex-direction: column;
     }
     h1{
         color: 100%;
